@@ -1,0 +1,40 @@
+<%{
+pp = FoodSales[Product == product];
+    // variable = form name [ Criteria];
+%>
+<table>
+
+<table style= "width:100%" border= "1px solid black " >
+
+<tr>
+
+<th>Order_Date</th>
+<th>Region</th>
+<th>City</th>
+<th>Category</th>
+<th>Product</th>
+<th>Quantity</th>
+<th>Unit_Price</th>
+<th>Total_Price</th>
+</tr>
+<%
+for each s in pp
+{
+%>
+<tr>
+<td> <%=s.OrderDate%> </td>
+<td> <%=s.Region%> </td>
+<td> <%=s.City%> </td>
+<td> <%=s.Category%> </td>
+<td> <%=s.Product%> </td>
+<td> <%=s.Quantity%> </td>
+<td> <%=s.UnitPrice%> </td>
+<td> <%=s.TotalPrice%> </td>
+</tr>
+<%
+}
+%>
+</table>
+<%
+
+}%>
